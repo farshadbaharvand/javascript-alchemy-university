@@ -98,7 +98,7 @@ Primitive types are immutable and compared by value.
 | BigInt    | Arbitrary-precision integer              | `12345678901234567890n` |
 
 ### Example:
-  javascript
+  
 let name = "Alice";       // String
 let age = 30;             // Number
 let isActive = true;      // Boolean
@@ -123,7 +123,7 @@ Reference types store a reference to the memory location.
 | Set       | Collection of unique values        | `new Set([1, 2, 3])` |
 
 ### Example:
-  javascript
+  
 const person = { name: "Bob", age: 25 }; // Object
 const numbers = [1, 2, 3];              // Array
 function greet() { console.log("Hi"); } // Function
@@ -149,7 +149,7 @@ const set = new Set([1, 2, 3]);         // Set
 | `typeof function(){}` | `"function"`|
 
 ### Example:
-  javascript
+  
 console.log(typeof "Hello"); // string
 console.log(typeof 42);      // number
 console.log(typeof null);    // object (quirk)
@@ -161,7 +161,7 @@ console.log(typeof null);    // object (quirk)
 - Use `Array.isArray()` to check for arrays.
 
 ### Example:
-  javascript
+  
 console.log(Array.isArray([1, 2, 3])); // true
   
 
@@ -263,14 +263,14 @@ In JavaScript, **operators** are special symbols or keywords used to perform ope
 ## 🟢 Conditional Statements
 
 ### `if` Statement
-  javascript
+  
 if (condition) {
   // code to execute if condition is true
 }
   
 
 ### `if...else`
-  javascript
+  
 if (condition) {
   // code if true
 } else {
@@ -279,7 +279,7 @@ if (condition) {
   
 
 ### `if...else if...else`
-  javascript
+  
 if (condition1) {
   // code if condition1 is true
 } else if (condition2) {
@@ -290,7 +290,7 @@ if (condition1) {
   
 
 ### `switch` Statement
-  javascript
+  
 switch (expression) {
   case value1:
     // code block
@@ -306,14 +306,14 @@ switch (expression) {
 ## 🟠 Loops
 
 ### `for` Loop
-  javascript
+  
 for (let i = 0; i < 5; i++) {
   console.log(i);
 }
   
 
 ### `while` Loop
-  javascript
+  
 let i = 0;
 while (i < 5) {
   console.log(i);
@@ -322,7 +322,7 @@ while (i < 5) {
   
 
 ### `do...while` Loop
-  javascript
+  
 let i = 0;
 do {
   console.log(i);
@@ -331,7 +331,7 @@ do {
   
 
 ### `for...of` Loop (Iterates over iterable objects)
-  javascript
+  
 const arr = ['a', 'b', 'c'];
 for (const item of arr) {
   console.log(item);
@@ -339,7 +339,7 @@ for (const item of arr) {
   
 
 ### `for...in` Loop (Iterates over object properties)
-  javascript
+  
 const obj = { name: "Alice", age: 25 };
 for (const key in obj) {
   console.log(key, obj[key]);
@@ -357,7 +357,7 @@ for (const key in obj) {
 | `try...catch` | Handles exceptions (errors)             |
 
 ### Example: `break` and `continue`
-  javascript
+  
 for (let i = 0; i < 5; i++) {
   if (i === 3) break;
   if (i === 1) continue;
@@ -369,7 +369,7 @@ for (let i = 0; i < 5; i++) {
 ## 🔴 Error Handling
 
 ### `try...catch`
-  javascript
+  
 try {
   // code that may throw an error
   nonExistentFunction();
@@ -379,7 +379,7 @@ try {
   
 
 ### `try...catch...finally`
-  javascript
+  
 try {
   console.log("Try block");
 } catch (error) {
@@ -390,7 +390,7 @@ try {
   
 
 ### `throw` Statement
-  javascript
+  
 function checkAge(age) {
   if (age < 18) {
     throw new Error("You must be at least 18");
@@ -410,61 +410,61 @@ function checkAge(age) {
 # JavaScript Functions Cheat Sheet
 
 ## 🟢 Function Declaration
-  javascript
+  
 function greet(name) {
   return `Hello, ${name}!`;
 }
   
 
 ## 🟠 Function Expression
-  javascript
+  
 const greet = function(name) {
   return `Hello, ${name}!`;
 };
   
 
 ## 🟡 Arrow Function
-  javascript
+  
 const greet = (name) => `Hello, ${name}!`;
   
 
 ## 🟣 Anonymous Function
-  javascript
+  
 setTimeout(function() {
   console.log("This runs after 1 second");
 }, 1000);
   
 
 ## 🔵 Named Function Expression
-  javascript
+  
 const factorial = function fact(n) {
   return n <= 1 ? 1 : n * fact(n - 1);
 };
   
 
 ## 🟤 Immediately Invoked Function Expression (IIFE)
-  javascript
+  
 (function() {
   console.log("IIFE runs immediately!");
 })();
   
 
 ## 🟢 Default Parameters
-  javascript
+  
 function greet(name = "Guest") {
   return `Hello, ${name}!`;
 }
   
 
 ## 🟠 Rest Parameters (`...args`)
-  javascript
+  
 function sum(...numbers) {
   return numbers.reduce((acc, val) => acc + val, 0);
 }
   
 
 ## 🟡 Spread Operator in Function Calls
-  javascript
+  
 const nums = [1, 2, 3];
 console.log(Math.max(...nums)); // 3
   
@@ -474,7 +474,7 @@ console.log(Math.max(...nums)); // 3
 - **Arguments**: Actual values passed to function.
 
 ## 🔵 Callback Functions
-  javascript
+  
 function processUserInput(callback) {
   const name = prompt("Enter your name:");
   callback(name);
@@ -488,7 +488,7 @@ processUserInput(function(name) {
 ## 🟤 Higher-Order Functions
 Functions that take other functions as arguments or return functions.
 
-  javascript
+  
 function multiplier(factor) {
   return function(number) {
     return number * factor;
@@ -502,7 +502,7 @@ console.log(double(5)); // 10
 ## 🟢 Function Scope & Closures
 
 ### Scope Example
-  javascript
+  
 function outer() {
   let outerVar = "I'm outside!";
   function inner() {
@@ -514,7 +514,7 @@ outer();
   
 
 ### Closure Example
-  javascript
+  
 function counter() {
   let count = 0;
   return function() {
@@ -537,7 +537,7 @@ console.log(increment()); // 2
 | Has `arguments` object  | ✅              | ❌              |
 
 ### Example:
-  javascript
+  
 function traditional() {
   console.log(this);
 }
